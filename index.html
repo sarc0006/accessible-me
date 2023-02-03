@@ -14,9 +14,12 @@
 
 <body>
   <div class="container">
+    <ul class="skip-links">
+      <li><a href="#main">Skip to main content</a></li>
+    </ul>
     <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <main id="top"><h1 role="heading">Jam Box Studios</h1></main>
+      <div class="main-nav" role="contentinfo">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
@@ -24,13 +27,14 @@
           <li><a href="#">Studio</a></li>
         </ul>
       </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      <img src="https://placekitten.com/1200/900" class="banner" alt="Image of a cat banner">
     </div>
+    <main id="main" role="main">
     <div class="main-content">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
+      <div class="owner" role="contentinfo">
         <h1>Meet the owner</h1>
         <ul>
           <li>Name: John Doe</li>
@@ -46,13 +50,14 @@
           B3T 0L0
         </p>
       </div>
-      <div class="contact-section">
+    </main>
+      <div class="contact-section" role="contentinfo">
         <h1>Contact Us</h1>
-        <form action="thanks.html">
+        <form action="thanks.html" itemscope itemtype="https://schema.org/Person">
           <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
+          <input type="text" placeholder="Full Name" role="form" itemprop="name">
+          <input type="text" placeholder="Email" role="form" itemprop="email">
+          <input type="text" placeholder="Subject" role="form" itemprop="message">
           <b>Your Message</b>
           <textarea></textarea>
           <button type="submit">Send</button>
@@ -60,7 +65,7 @@
       </div>
     </div>
     <div class="site-footer">
-      &copy; 2021 Jam Box Studios
+     <footer role="contentinfo">&copy; 2021 Jam Box Studios</footer> <a href="#top">Back to Top</a>
     </div>
   </div>
 </body>
